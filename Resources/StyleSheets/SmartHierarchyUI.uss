@@ -1,0 +1,59 @@
+
+
+
+SetActiveToggle
+{
+    opacity: 0;
+}
+HierarchyViewItemContainer:hover SetActiveToggle
+{
+    opacity: 1;
+}
+.unity-collection-view__item--selected SetActiveToggle
+{
+    opacity: 1;
+}
+SetActiveToggle.toggle-object-disabled
+{
+    opacity: 1;
+}
+
+ComponentsBar
+{
+    opacity: 0;
+}
+ComponentsBar.components-bar-always-visible
+{
+    opacity: 1;
+}
+.unity-collection-view__item--selected ComponentsBar
+{
+    opacity: 1;
+}
+HierarchyViewItemContainer:hover ComponentsBar
+{
+    opacity: 1;
+}
+
+.hide-columns
+{
+    height: 0;
+    border-bottom-width: 0;
+}
+
+.compact-toolbar
+{
+    height: 21px;
+}
+.compact-toolbar > ToolbarButton
+{
+    height: 19px;
+}
+.compact-toolbar > SearchFieldElement
+{
+    height: 19px;
+}
+.compact-toolbar > SearchFieldElement > ToolbarSearchField
+{
+    height: 18px;
+}

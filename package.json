@@ -1,0 +1,15 @@
+{
+  "name": "com.neonage.smart-tools",
+  "displayName": "Smart Tools",
+  "version": "0.1.0",
+  "unity": "6000.6",
+  "keywords": [
+    "editor",
+    "tools"
+  ],
+  "category": "Architecture",
+  "description": "Unity Editor tools.",
+  "author": {
+    "name": "Neonage"
+  }
+}
