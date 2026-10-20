@@ -1,6 +1,5 @@
-Made in Unity 6.7, should work in 6.6  
-  
- ### Options available in Edit > Preferences > Smart Tools, key binds can be assigned in Edit > Shortcuts
+Supported Unity versions: **6.6, 6.7, 7.0**  
+Options available in ***Edit > Preferences > Smart Tools***, key binds can be assigned in ***Edit > Shortcuts***
 
 # Editor:
 * Fullscreen Editor toggle for Windows that hides app top bar, except MenuItems ("F11" shortcut)  

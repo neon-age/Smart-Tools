@@ -1,5 +1,4 @@
 
-#if UNITY_EDITOR
 using UnityEngine;
 using System;
 
@@ -51,4 +50,3 @@ namespace Neonage.SmartTools
         }
     }
 }
-#endif

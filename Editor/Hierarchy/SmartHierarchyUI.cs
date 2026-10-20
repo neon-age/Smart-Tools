@@ -1,4 +1,4 @@
-#if UNITY_EDITOR
+
 using System;
 using System.Collections.Generic;
 using System.Reflection;
@@ -68,7 +68,7 @@ namespace Neonage.SmartTools
 
                 viewData.root.schedule.Execute(viewData.RebuildIfNeeded).Every(30);
 
-                AddSettingsButton(viewData.toolbar);
+                //AddSettingsButton(viewData.toolbar);
             }
 
             var notDisabledItemContainer = item.parent; // parent of HierarchyViewItem is not marked with .unity-disabled when object is disabled
@@ -142,19 +142,17 @@ namespace Neonage.SmartTools
             }
         }
 
-        static void AddSettingsButton(Toolbar toolbar)
-        {
-            var settingsButton = new ToolbarButton { iconImage = (Texture2D)EditorGUIUtility.IconContent("d_EditorSettings Icon").image };
-            settingsButton.clicked += () => SettingsService.OpenUserPreferences("Preferences/Smart Tools");
-            
-            toolbar.Add(settingsButton);
-
-            settingsButton.style.maxWidth = 28;
-            var settingsButtonIcon = settingsButton.Q<Image>();
-            settingsButtonIcon.style.maxHeight = 16;
-            settingsButtonIcon.style.maxWidth = 16;
-            settingsButtonIcon.style.marginBottom = 1;
-        }
+        //static void AddSettingsButton(Toolbar toolbar)
+        //{
+        //    var settingsButton = new ToolbarButton { iconImage = (Texture2D)EditorGUIUtility.IconContent("d_EditorSettings Icon").image };
+        //    settingsButton.clicked += () => SettingsService.OpenUserPreferences("Preferences/Smart Tools");
+        //    settingsButton.style.maxWidth = 28;
+        //    var settingsButtonIcon = settingsButton.Q<Image>();
+        //    settingsButtonIcon.style.maxHeight = 16;
+        //    settingsButtonIcon.style.maxWidth = 16;
+        //    settingsButtonIcon.style.marginBottom = 1;
+        //    toolbar.Add(settingsButton);
+        //}
     }
 
     [NoAutoStaticsCleanup]
@@ -216,4 +214,3 @@ namespace Neonage.SmartTools
         }  
     }
 }
-#endif

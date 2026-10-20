@@ -1,4 +1,4 @@
-#if UNITY_EDITOR
+
 using System.Collections.Generic;
 using System.Reflection;
 using Unity.Scripting.LifecycleManagement;
@@ -86,4 +86,3 @@ namespace Neonage.SmartTools
         }
     }
 }
-#endif

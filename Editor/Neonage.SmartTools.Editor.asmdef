@@ -1,13 +1,17 @@
 {
-    "name": "Neonage.SmartTools",
+    "name": "Neonage.SmartTools.Editor",
     "rootNamespace": "Neonage.SmartTools",
-    "references": [],
-    "includePlatforms": [],
+    "references": [
+        "GUID:9acbc4973982e5f44a52251bcd25e1af"
+    ],
+    "includePlatforms": [
+        "Editor"
+    ],
     "excludePlatforms": [],
     "allowUnsafeCode": false,
     "overrideReferences": true,
     "precompiledReferences": [],
-    "autoReferenced": true,
+    "autoReferenced": false,
     "defineConstraints": [],
     "versionDefines": [],
     "noEngineReferences": false

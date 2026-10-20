@@ -1,22 +1,13 @@
 
-#if UNITY_EDITOR
 using UnityEngine.UIElements;
 using UnityEditor;
 using UnityEditor.UIElements;
 using UnityEngine;
 
-#endif
-
-namespace UnityEngine // silly, but why not?
-{
-    public class ReadOnlyInInspectorAttribute : UnityEngine.PropertyAttribute {}
-}
-
 namespace Neonage.SmartTools
 {
     // TODO: make solution that doesn't use PropertyDrawer
     // TODO: InspectorName support for fields?
-#if UNITY_EDITOR 
     [CustomPropertyDrawer(typeof(UnityEngine.ReadOnlyInInspectorAttribute))]
     class ReadOnlyInInspectorDrawer : PropertyDrawer
     {
@@ -36,5 +27,4 @@ namespace Neonage.SmartTools
             EditorGUI.EndDisabledGroup();
         }
     }
-#endif
 }

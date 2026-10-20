@@ -1,4 +1,4 @@
-#if UNITY_EDITOR
+
 using UnityEditor;
 using UnityEditor.ShortcutManagement;
 using UnityEngine;
@@ -41,4 +41,3 @@ namespace Neonage.SmartTools
         }
     }
 }
-#endif

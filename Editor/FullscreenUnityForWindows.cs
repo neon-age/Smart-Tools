@@ -1,4 +1,4 @@
-#if UNITY_EDITOR && UNITY_EDITOR_WIN
+#if UNITY_EDITOR_WIN
 using System;
 using System.Runtime.InteropServices;
 using System.Text;
@@ -110,13 +110,13 @@ namespace Neonage.SmartTools
             public uint dwFlags;
         }
 
-        const string PREF_PREFIX = $"FullscreenUnity_";
-        const string PREF_IS_BORDERLESS = $"{PREF_PREFIX}_IsEnabled";
-        const string PREF_STYLE = $"{PREF_PREFIX}_Style";
-        const string PREF_RECT_L = $"{PREF_PREFIX}_RectL";
-        const string PREF_RECT_T = $"{PREF_PREFIX}_RectT";
-        const string PREF_RECT_R = $"{PREF_PREFIX}_RectR";
-        const string PREF_RECT_B = $"{PREF_PREFIX}_RectB";
+        static readonly string PREF_PREFIX = $"FullscreenUnity_";
+        static readonly string PREF_IS_BORDERLESS = $"{PREF_PREFIX}_IsEnabled";
+        static readonly string PREF_STYLE = $"{PREF_PREFIX}_Style";
+        static readonly string PREF_RECT_L = $"{PREF_PREFIX}_RectL";
+        static readonly string PREF_RECT_T = $"{PREF_PREFIX}_RectT";
+        static readonly string PREF_RECT_R = $"{PREF_PREFIX}_RectR";
+        static readonly string PREF_RECT_B = $"{PREF_PREFIX}_RectB";
     
 
         [MenuItem("Tools/Toggle Borderless Editor _F11")]

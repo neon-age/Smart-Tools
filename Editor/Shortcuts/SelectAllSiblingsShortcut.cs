@@ -1,4 +1,4 @@
-#if UNITY_EDITOR
+
 using System.Collections.Generic;
 using Unity.Hierarchy.Editor;
 using UnityEditor;
@@ -45,4 +45,3 @@ namespace Neonage.SmartTools
         }
     }
 }
-#endif
