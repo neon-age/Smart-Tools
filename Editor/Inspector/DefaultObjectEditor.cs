@@ -47,6 +47,8 @@ namespace Neonage.SmartTools
             var prefs = SmartToolsPrefs.Instance.inspector;
             var hideScriptField = prefs.hideScriptField;
 
+            serializedObject.Update();
+
             var property = serializedObject.GetIterator();
             if (property.NextVisible(true))
             {
@@ -68,6 +70,8 @@ namespace Neonage.SmartTools
                 } 
                 while (property.NextVisible(false));
             }
+
+            serializedObject.ApplyModifiedProperties();
         }
     }
 }
