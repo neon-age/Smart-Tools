@@ -46,5 +46,5 @@ namespace Neonage.SmartTools
             return json;
         }
     }
-#endif
 }
+#endif

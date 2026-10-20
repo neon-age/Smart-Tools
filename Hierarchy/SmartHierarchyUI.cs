@@ -49,7 +49,7 @@ namespace Neonage.SmartTools
 
         static void OnBindViewItem(HierarchyWindow window, HierarchyView hierarchyView, HierarchyViewItem item)
         {
-            var prefs = SmartHierarchyPrefs.Instance;
+            var prefs = SmartToolsPrefs.Instance.hierarchy;
 
             if (!RegisteredViews.TryGetValue(window, out var viewData))
             {
@@ -109,7 +109,7 @@ namespace Neonage.SmartTools
             if (!hasGO)
                 return;
             
-            if (prefs.componentsBarVisibility != SmartHierarchyPrefs.ComponentsBarVisibility.Disabled)
+            if (prefs.componentsBarVisibility != SmartToolsPrefs.Hierarchy.ComponentsBarVisibility.Disabled)
             {
                 componentsBar ??= new ComponentsBar();
                 item.RightCustomContainer.Add(componentsBar);
@@ -118,7 +118,7 @@ namespace Neonage.SmartTools
                 go.GetComponents(ComponentsTempList);
                 componentsBar.Bind(ComponentsTempList);
                 componentsBar.style.display = DisplayStyle.Flex;
-                componentsBar.EnableInClassList("components-bar-always-visible", prefs.componentsBarVisibility == SmartHierarchyPrefs.ComponentsBarVisibility.AlwaysVisible);
+                componentsBar.EnableInClassList("components-bar-always-visible", prefs.componentsBarVisibility == SmartToolsPrefs.Hierarchy.ComponentsBarVisibility.AlwaysVisible);
             }
 
             if (prefs.inlineActiveToggle)
@@ -145,7 +145,7 @@ namespace Neonage.SmartTools
         static void AddSettingsButton(Toolbar toolbar)
         {
             var settingsButton = new ToolbarButton { iconImage = (Texture2D)EditorGUIUtility.IconContent("d_EditorSettings Icon").image };
-            settingsButton.clicked += () => SettingsService.OpenUserPreferences("Preferences/Smart Tools/Smart Hierarchy");
+            settingsButton.clicked += () => SettingsService.OpenUserPreferences("Preferences/Smart Tools");
             
             toolbar.Add(settingsButton);
 

@@ -1,0 +1,26 @@
+
+
+
+Foldout 
+{
+    margin-bottom: 10px;
+}
+Foldout > .unity-foldout__content
+{
+    padding-top: 4px;
+}
+
+Foldout > Toggle 
+{
+    margin-left: -2px;
+    padding-left: 4px;
+}
+
+Foldout > Toggle 
+{
+    font-size: 16px;
+    -unity-font-style: bold;
+    background-color: rgba(0, 0, 0, 0.349);
+    border-radius: 4px;
+    
+}

@@ -1,3 +1,14 @@
 {
-	"name": "Neonage.SmartTools"
+    "name": "Neonage.SmartTools",
+    "rootNamespace": "Neonage.SmartTools",
+    "references": [],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": true,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
 }

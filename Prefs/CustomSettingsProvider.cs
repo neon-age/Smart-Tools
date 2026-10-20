@@ -13,26 +13,35 @@ namespace Neonage.SmartTools
 
         public abstract void OnSerializedObjectChanged(SerializedObject so);
 
-        public void OnCreateUI(ScriptableObject prefs, string searchContext, VisualElement root)
+        public VisualElement CreateDefaultRootWithTitle(SerializedObject serializedObject)
+        {
+            var root = new VisualElement();
+            root.AddToClassList("unity-inspector-main-container"); // makes PropertyField respect the fixed labelWidth
+            root.AddToClassList("unity-inspector-element");
+
+            root.style.paddingLeft = 7;
+            root.style.paddingTop = 2;
+
+            var title = new Label(label);
+            title.style.fontSize = 18;
+            title.style.unityFontStyleAndWeight = FontStyle.Bold;
+            title.style.marginBottom = 10;
+            root.Add(title);
+
+            root.Bind(serializedObject);
+            root.TrackSerializedObjectValue(serializedObject, OnSerializedObjectChanged);
+            return root;
+        }
+
+        public VisualElement OnCreateUI(ScriptableObject prefs, string searchContext, VisualElement windowRoot)
         {
             try
             {
                 var serializedObject = new SerializedObject(prefs);
                 serializedObject.Update();
 
-                var container = new VisualElement();
-                root.Add(container);
-                root.AddToClassList("unity-inspector-main-container"); // makes PropertyField respect the fixed labelWidth
-                root.AddToClassList("unity-inspector-element");
-
-                container.style.paddingLeft = 7;
-                container.style.paddingTop = 2;
-
-                var titleLabel = new Label(label);
-                titleLabel.style.fontSize = 18;
-                titleLabel.style.unityFontStyleAndWeight = FontStyle.Bold;
-                titleLabel.style.marginBottom = 10;
-                container.Add(titleLabel);
+                var root = CreateDefaultRootWithTitle(serializedObject);
+                windowRoot.Add(root);
 
                 var iterator = serializedObject.GetIterator();
 
@@ -42,16 +51,16 @@ namespace Neonage.SmartTools
                     enterChildren = false;
                     if (iterator.name == "m_Script")
                         continue;
-                    container.Add(new PropertyField(iterator));
+                    iterator.isExpanded = true;
+                    root.Add(new PropertyField(iterator));
                 }
-                root.Bind(serializedObject);
-
-                root.TrackSerializedObjectValue(serializedObject, OnSerializedObjectChanged);
+                return root;
             }
             catch (Exception ex)
             {
                 Debug.LogException(ex);
             }
+            return null;
         }
     }
 }
