@@ -1,7 +1,7 @@
 {
   "name": "com.neonage.smart-tools",
   "displayName": "Smart Tools",
-  "version": "0.1.0",
+  "version": "0.1.5",
   "unity": "6000.6",
   "keywords": [
     "editor",
