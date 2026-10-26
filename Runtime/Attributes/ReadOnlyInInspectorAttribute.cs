@@ -1,6 +1,6 @@
 
 
-namespace UnityEngine // silly, but why not?
+namespace Neonage.SmartTools
 {
     public class ReadOnlyInInspectorAttribute : UnityEngine.PropertyAttribute {}
 }

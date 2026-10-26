@@ -8,7 +8,7 @@ namespace Neonage.SmartTools
 {
     // TODO: make solution that doesn't use PropertyDrawer
     // TODO: InspectorName support for fields?
-    [CustomPropertyDrawer(typeof(UnityEngine.ReadOnlyInInspectorAttribute))]
+    [CustomPropertyDrawer(typeof(ReadOnlyInInspectorAttribute))]
     class ReadOnlyInInspectorDrawer : PropertyDrawer
     {
         public override VisualElement CreatePropertyGUI(SerializedProperty property)

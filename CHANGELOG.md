@@ -1,6 +1,12 @@
 # Changelog
 
 
+## [0.1.6] - 2026-10-26
+
+### Inspector:
+* UnityEngine.Object field is significantly improved (type select menu when dragging), added SupportedReferenceTypesAttribute
+
+
 ## [0.1.5] - 2026-10-20
 
 ### Editor:
