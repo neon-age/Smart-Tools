@@ -9,6 +9,7 @@ using UnityEngine.UIElements;
 namespace Neonage.SmartTools
 {
     [NoAutoStaticsCleanup]
+    [CanEditMultipleObjects]
     [CustomEditor(typeof(UnityEngine.Object), editorForChildClasses: true, isFallback = true)]
     class DefaultObjectEditor : Editor
     {
@@ -36,7 +37,7 @@ namespace Neonage.SmartTools
                     {
                         root.Add(new PropertyField(property));
                     }
-                } 
+                }
                 while (property.NextVisible(false));
             }
             return root;
@@ -67,7 +68,7 @@ namespace Neonage.SmartTools
                     {
                         EditorGUILayout.PropertyField(property);
                     }
-                } 
+                }
                 while (property.NextVisible(false));
             }
 
