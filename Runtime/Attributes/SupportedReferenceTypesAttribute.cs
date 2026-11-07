@@ -6,11 +6,12 @@ namespace Neonage.SmartTools
     public class SupportedReferenceTypesAttribute : PropertyAttribute
     {
         public Type[] types;
+        public bool allowSceneObjects = true;
         public bool alwaysReferenceRootObject; // Will reference GameObject when dragging Component
 
         public SupportedReferenceTypesAttribute(params Type[] types)
         {
-            this.types = types;   
+            this.types = types;
         }
     }
 }
