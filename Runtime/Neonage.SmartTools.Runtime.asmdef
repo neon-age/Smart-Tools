@@ -2,9 +2,7 @@
     "name": "Neonage.SmartTools.Runtime",
     "rootNamespace": "Neonage.SmartTools",
     "references": [],
-    "includePlatforms": [
-        "Editor"
-    ],
+    "includePlatforms": [],
     "excludePlatforms": [],
     "allowUnsafeCode": false,
     "overrideReferences": true,
